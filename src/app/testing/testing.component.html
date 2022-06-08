@@ -1,0 +1,105 @@
+<div class="button-container">
+  <button type="button" class="btn btn-outline-primary btn-sm" (click)="open()">
+    Open
+  </button>
+  <button type="button" class="btn btn-outline-danger btn-sm" (click)="close()">
+    Close
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-sm"
+    (click)="toggle()"
+  >
+    Toggle
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-dark btn-sm"
+    (click)="toggleDarkTheme()"
+  >
+    Toggle Dark Theme
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-primary btn-sm"
+    (click)="toggleCloseButton()"
+  >
+    Toggle Close Button
+  </button>
+</div>
+
+<angular-bottom-sheet #test [options]="options">
+  <p>What is Lorem Ipsum?</p>
+  <div class="p-2">
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-2">Cuota</p>
+      <p class="equis-body-2">Vencimiento</p>
+      <p class="equis-body-2">Monto</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 1</p>
+      <p class="equis-body-1">10/AGO/21</p>
+      <p class="equis-body-1">$3.947,88</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 2</p>
+      <p class="equis-body-1">10/SEP/21</p>
+      <p class="equis-body-1">$3.945,76</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 3</p>
+      <p class="equis-body-1">10/OCT/21</p>
+      <p class="equis-body-1">$3.557,17</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-2">Cuota</p>
+      <p class="equis-body-2">Vencimiento</p>
+      <p class="equis-body-2">Monto</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 1</p>
+      <p class="equis-body-1">10/AGO/21</p>
+      <p class="equis-body-1">$3.947,88</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 2</p>
+      <p class="equis-body-1">10/SEP/21</p>
+      <p class="equis-body-1">$3.945,76</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 3</p>
+      <p class="equis-body-1">10/OCT/21</p>
+      <p class="equis-body-1">$3.557,17</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-2">Cuota</p>
+      <p class="equis-body-2">Vencimiento</p>
+      <p class="equis-body-2">Monto</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 1</p>
+      <p class="equis-body-1">10/AGO/21</p>
+      <p class="equis-body-1">$3.947,88</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 2</p>
+      <p class="equis-body-1">10/SEP/21</p>
+      <p class="equis-body-1">$3.945,76</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 3</p>
+      <p class="equis-body-1">10/OCT/21</p>
+      <p class="equis-body-1">$3.557,17</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 2</p>
+      <p class="equis-body-1">10/SEP/21</p>
+      <p class="equis-body-1">$3.945,76</p>
+    </div>
+    <div class="flex-space-between margin-top-24">
+      <p class="equis-body-1">Cuota 3</p>
+      <p class="equis-body-1">10/OCT/21</p>
+      <p class="equis-body-1">$33.557,17</p>
+    </div>
+  </div>
+</angular-bottom-sheet>

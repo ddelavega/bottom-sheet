@@ -44,18 +44,6 @@
 .bg-dark-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
-/*
-.bottom-sheet-footer {
-  text-align: center;
-  padding: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.16);
-  background: rgba(0, 0, 0, 0.02);
-  cursor: pointer;
-}
-
-.bg-dark-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-} */
 
 .bottom-sheet-content {
   max-height: 260px;
@@ -63,35 +51,71 @@
   padding: 16px;
 }
 
+.bottom-sheet-content.to-bottom{
+  max-height: 200px;
+}
 
 .bottom-sheet-content.to-max {
-  max-height: calc(90vh - 60px);
+  max-height: calc(90vh - 100px);
+  /* max-height: 200px; */
 }
 
 .bottom-sheet-content.to-min {
-  max-height: 260px;
+  max-height: 200px;
 }
+
 .to-max {
-  height: calc(90vh - 60px);
+  max-height: calc(90vh - 100px);
   animation: toTop .5s;
 }
 /* cuando hago clic en el trigger se tiene que resetar el alto de la sheet */
 .to-min {
   max-height: 260px;
-  animation: toBottom .5s;
+  animation: toBottom .1s;
+}
+
+@keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @keyframes toTop {
-  0% {max-height: 260px;}
-  100% {max-height: calc(90vh - 60px);}
+  0% {max-height: 248px;}
+  100% {max-height:  calc(90vh - 100px);}
 }
 
 @keyframes toBottom {
-  0% {max-height: calc(90vh - 60px);}
-  100% {max-height: 260px;}
+  0% {max-height: calc(90vh - 100px);}
+  100% {max-height: 248px;}
 }
 
+/* .bottom-sheet-container {
+  animation: toBottom .5s;
+  max-height: calc(200px - 60px);
 
+} */
+
+.shadowDefault {
+  box-shadow: 0 0 15px rgba(255,255,255,0);
+  clip-path: inset(0px 0px -15px 0px);
+}
+.shadowDefault.headingShadow{
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  clip-path: inset(0px 0px -15px 0px);
+}
+
+.bottom-sheet-footer {
+  text-align: center;
+  padding: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  animation: fade 1s;
+}
+
+.bg-dark-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
 /* width */
 ::-webkit-scrollbar {
   width: 6px;

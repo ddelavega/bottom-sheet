@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularBottomSheetComponent } from './component/angular-bottom-sheet.component';
 import { TestingComponent } from './testing/testing.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,10 @@ import { TestingComponent } from './testing/testing.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule,
+    HttpClientModule,
+
   ],
   exports: [
     AngularBottomSheetComponent

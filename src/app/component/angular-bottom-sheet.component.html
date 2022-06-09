@@ -4,7 +4,7 @@
   (click)="close()"
 ></div>
 <div
-  class="bottom-sheet-container to-bottom{{ up ? ' to-max' : ' to-min' }}"
+  class="bottom-sheet-container"
   [ngClass]="{ 'bg-dark': options?.darkTheme }"
   *ngIf="flags.isBottomSheetEnabled"
   [style.backgroundColor]="options?.backgroundColor"
@@ -13,22 +13,29 @@
 >
   <div>
     <div
-      class="bottom-sheet-header"
+      class="bottom-sheet-header shadowDefault {{ shadowClass }}"
       [ngClass]="{ 'bg-dark-header': options?.darkTheme }"
     >
-      <h4 class="title">{{ options?.title }}</h4>
+      <h4 class="title">
+        {{ options?.title }}{{ flags.isCloseButtonEnabled ? " btnClose" : "" }}
+      </h4>
       <button (click)="up = !up">up {{ up }}</button>
     </div>
-    <div class="bottom-sheet-content to-bottom{{ up ? ' to-max' : ' to-min' }}">
+    <div
+      class="bottom-sheet-content to-bottom{{ up ? ' to-max' : ' to-min' }}{{
+        flags.isCloseButtonEnabled ? ' btnClose' : ''
+      }}"
+      (scroll)="checkthis($event)"
+    >
       <ng-content></ng-content>
     </div>
-    <!-- <div
+    <div
       class="bottom-sheet-footer"
       [ngClass]="{ 'bg-dark-footer': options?.darkTheme }"
       (click)="close()"
       *ngIf="flags.isCloseButtonEnabled"
     >
       {{ options.closeButtonTitle }}
-    </div> -->
+    </div>
   </div>
 </div>
